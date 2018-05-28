@@ -20,17 +20,28 @@ namespace WpfApp1
     /// </summary>
     public partial class MainWindow : Window
     {
-        #region Zmienne PRIVATE
+        #region VARIABLES
+
+        #region PRIVATE variables
         private short test;
         #endregion
-        #region INTERNAL
+
+        #region INTERNAL variables
 
         #endregion
+
+        #region PUBLIC variables
+
+        #endregion
+
+        #endregion
+
 
         #region Konstruktor
         public MainWindow()
         {
             InitializeComponent();
+            metod1();
         }
         #endregion
 
@@ -39,10 +50,12 @@ namespace WpfApp1
         /// <summary>
         /// a test method do not use
         /// </summary>
-        /// <param name="a"></param> 
-        public void metod1(int a)
+        public void metod1()
         {
-
+            var testy = test;
+            for (int i = 0; i < 5; i++)
+                testy++;
+            TXT_test.Text = testy.ToString();
         }
         #endregion
 
