@@ -8,6 +8,9 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <TextBox x:Name="TXT_test" HorizontalAlignment="Center" TextWrapping="Wrap" Text="TextBoxaaaaa" VerticalAlignment="Center" FontSize="24"/>
+        <TextBox x:Name="TXT_pierwszywarunek" HorizontalAlignment="Left" Margin="0" TextWrapping="Wrap" Text="5" VerticalAlignment="Top" FontSize="22"/>
+        <TextBox x:Name="TXT_drugiwarunek" HorizontalAlignment="Left" Margin="0,31,0,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" FontSize="22"/>
+        <Button x:Name="BT_liczenie" Content="Przelicz" HorizontalAlignment="Left" Margin="373,159,0,0" VerticalAlignment="Top" Width="75" Click="BT_liczenie_click"/>
 
     </Grid>
 </Window>

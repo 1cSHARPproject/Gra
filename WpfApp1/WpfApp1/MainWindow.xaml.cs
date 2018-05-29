@@ -23,7 +23,7 @@ namespace WpfApp1
         #region VARIABLES
 
         #region PRIVATE variables
-        private short test;
+        private int test=1; //testowa zmienna
         #endregion
 
         #region INTERNAL variables
@@ -36,7 +36,6 @@ namespace WpfApp1
 
         #endregion
 
-
         #region Konstruktor
         public MainWindow()
         {
@@ -45,19 +44,30 @@ namespace WpfApp1
         }
         #endregion
 
-
         #region Metods
         /// <summary>
         /// a test method do not use
         /// </summary>
-        public void metod1()
+        private void metod1()
         {
-            var testy = test;
-            for (int i = 0; i < 5; i++)
-                testy++;
+            
+            
+        }
+        private int metod2(int a, int b)
+        {
+            var one = a;
+            var two = b;
+            var zwrot = a * a * a + b;
+            return zwrot;
+        }
+        
+        private void BT_liczenie_click(object sender, RoutedEventArgs e)
+        {
+            var first = TXT_pierwszywarunek.Text;
+            var second = TXT_drugiwarunek.Text;
+            var testy = metod2(Convert.ToInt32(first),Convert.ToInt32(second));
             TXT_test.Text = testy.ToString();
         }
         #endregion
-
     }
 }
