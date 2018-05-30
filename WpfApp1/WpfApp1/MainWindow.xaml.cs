@@ -22,18 +22,28 @@ namespace WpfApp1
     {
         #region VARIABLES
 
-        #region PRIVATE variables
-        private int test=1; //testowa zmienna
+            #region PRIVATE variables
+            private int test=1; //testowa zmienna
+            #endregion
+
+            #region INTERNAL variables
+
+            #endregion
+
+            #region PUBLIC variables
+
+            #endregion
+
         #endregion
+        #region STABLES
+            #region PRIVATE stables
+            #endregion
 
-        #region INTERNAL variables
+            #region INTERNAL stables
+            #endregion
 
-        #endregion
-
-        #region PUBLIC variables
-
-        #endregion
-
+            #region PUBLIC stables
+            #endregion
         #endregion
 
         #region Konstruktor
@@ -45,7 +55,7 @@ namespace WpfApp1
         #endregion
 
         #region Metods
-        Player player = new Player();
+        Player player = new Player("steafan");
         
         /// <summary>
         /// a test method do not use
@@ -77,8 +87,9 @@ namespace WpfApp1
         {
             var first = TXT_pierwszywarunek.Text;
             var second = TXT_drugiwarunek.Text;
-            var testy = metod2(Convert.ToInt32(first),Convert.ToInt32(second));
-            TXT_test.Text = testy.ToString();
+            //var testy = metod2(Convert.ToInt32(first),Convert.ToInt32(second));
+            var testy = player.getUsername();
+            TXT_test.Text = testy;
         }
         #endregion
     }
