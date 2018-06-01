@@ -4,16 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WpfApp1
+namespace WpfApp1.Clases
 {
     public class Player
     {
         #region VARIABLES
 
         #region PRIVATE variables
-        private string Username;
-        private int MaxHp;
-        private int Hp;
+
         #endregion
 
         #region INTERNAL variables
@@ -21,7 +19,10 @@ namespace WpfApp1
         #endregion
 
         #region PUBLIC variables
-
+        public string Username { get; }
+        public int MaxHp { get; set; }
+        public int Hp { get; set; }
+        public int Item1 { get; set;  }
         #endregion
 
         #endregion
@@ -35,19 +36,11 @@ namespace WpfApp1
         #region PUBLIC stables
         #endregion
         #endregion
-        #region Other declaration
-        enum Item1 { Hammer, Sword, FireExinguisher }
-        enum Item2 { Hammer, Sword, FireExinguisher }
-        enum Suit { SpaceSuit,ArmoredSpaceSuit}
-        #endregion
 
-        public Player(string username)
+        public Player(string username )
         {
             Username = username;
         }
-        public string getUsername()
-        {
-            return Username;
-        }
+
     }
 }

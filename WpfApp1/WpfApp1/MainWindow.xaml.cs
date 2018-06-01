@@ -1,17 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using WpfApp1.Clases;
 
 namespace WpfApp1
 {
@@ -87,10 +76,10 @@ namespace WpfApp1
         {
             var first = TXT_pierwszywarunek.Text;
             var second = TXT_drugiwarunek.Text;
-            //var testy = metod2(Convert.ToInt32(first),Convert.ToInt32(second));
-            var testy = player.getUsername();
-            TXT_test.Text = testy;
+            var testy = metod2(Convert.ToInt32(first),Convert.ToInt32(second));
+            TXT_test.Text = player.Username;
         }
         #endregion
+        EnumHelper
     }
 }
