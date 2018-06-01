@@ -1,8 +1,11 @@
-﻿using System;
+﻿
+using Game.Clases;
+using Game.Helpers;
+using System;
 using System.Windows;
-using WpfApp1.Clases;
 
-namespace WpfApp1
+
+namespace Game
 {
     /// <summary>
     /// Logika interakcji dla klasy MainWindow.xaml
@@ -44,7 +47,7 @@ namespace WpfApp1
         #endregion
 
         #region Metods
-        Player player = new Player("steafan");
+        Player player = new Player(username :"steafan", hp : 5);
         
         /// <summary>
         /// a test method do not use
@@ -80,6 +83,6 @@ namespace WpfApp1
             TXT_test.Text = player.Username;
         }
         #endregion
-        EnumHelper
+
     }
 }
