@@ -1,5 +1,5 @@
 ﻿
-using Game.Clases;
+using Game.Clases.Entity;
 using Game.Helpers;
 using System;
 using System.Windows;
@@ -47,7 +47,7 @@ namespace Game
         #endregion
 
         #region Metods
-        Player player = new Player(username :"janusz", MaxHp : 5);
+        private Player player = new Player("marcin");
         
         /// <summary>
         /// a test method do not use

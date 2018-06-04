@@ -6,21 +6,37 @@ using System.Threading.Tasks;
 
 namespace Game.Helpers
 {
-
-    public enum Item1
+    /// <summary>
+    /// Nothing,Hammer,Sword,FireExinguisher
+    /// </summary>
+    public enum Item
     {
+        /// <summary>
+        /// Nothing/null
+        /// </summary>
+        Nothing,
+        /// <summary>
+        /// An universal tool to build and repair
+        /// </summary>
         Hammer,
+        /// <summary>
+        /// A tool to fight with enemys
+        /// </summary>
         Sword,
+        /// <summary>
+        /// A tool to fight with fire
+        /// </summary>
         FireExinguisher
     }
-    public enum Item2
-    {
-        Hammer,
-        Sword,
-        FireExinguisher
-    }
+    /// <summary>
+    /// Nothing,SpaceSuit,ArmoredSpaceSuit
+    /// </summary>
     public enum Suit
     {
+        /// <summary>
+        /// Nothing/null
+        /// </summary>
+        Nothing,
         SpaceSuit,
         ArmoredSpaceSuit
     }

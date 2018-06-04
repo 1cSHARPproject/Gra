@@ -3,10 +3,11 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:WpfApp1"
+        xmlns:local="clr-namespace:Game"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        
         <TextBox x:Name="TXT_test" HorizontalAlignment="Center" TextWrapping="Wrap" Text="TextBoxaaaaa" VerticalAlignment="Center" FontSize="24"/>
         <TextBox x:Name="TXT_pierwszywarunek" HorizontalAlignment="Left" Margin="0" TextWrapping="Wrap" Text="5" VerticalAlignment="Top" FontSize="22"/>
         <TextBox x:Name="TXT_drugiwarunek" HorizontalAlignment="Left" Margin="0,31,0,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" FontSize="22"/>

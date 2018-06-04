@@ -1,13 +1,12 @@
-﻿using Game.Helpers;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Game.Clases
+namespace Game.Clases.Entity
 {
-    public class Player
+    class Enemy : Entity
     {
         #region VARIABLES
 
@@ -20,48 +19,54 @@ namespace Game.Clases
         #endregion
 
         #region PUBLIC variables
-        public string Username { get; }
-        public int MaxHp { get; set; }
-        public int Hp { get; set; }
-        public Item1 Item1 { get; set; }
+        public int Dmg { get; }
         #endregion
 
         #endregion
         #region STABLES
         #region PRIVATE stables
+
         #endregion
 
         #region INTERNAL stables
+
         #endregion
 
         #region PUBLIC stables
+
         #endregion
         #endregion
         #region Other declaration
 
         #endregion
-		
-        public Player(string username)
+        #region Class Constructors
+        public Enemy()
         {
-            Username = username;
+            MaxHp = 100;
+            Hp = MaxHp;
+            Dmg = 1;
         }
-        public Player(string username, Item1 item1)
+
+        public Enemy(int maxHp) : base(maxHp)
         {
-            Username = username;
-            Item1 = item1;
-        }
-        public Player(string username, Item1 item1, int maxHp)
-        {
-            Username = username;
-            Item1 = item1;
             MaxHp = maxHp;
+            Hp = MaxHp;
+            Dmg = 1;
         }
-        public Player(string username, Item1 item1, int maxHp, int hp)
+
+        public Enemy(int maxHp, int hp) : base(maxHp, hp)
         {
-            Username = username;
-            Item1 = item1;
             MaxHp = maxHp;
             Hp = hp;
+            Dmg = 1;
         }
+        public Enemy(int maxHp, int hp, int dmg) : base(maxHp, hp)
+        {
+            MaxHp = maxHp;
+            Hp = hp;
+            Dmg = dmg; 
+        }
+        #endregion
+
     }
 }

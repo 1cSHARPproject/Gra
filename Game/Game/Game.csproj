@@ -62,7 +62,12 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Clases\Player.cs" />
+    <Compile Include="Clases\Entity\Animals\Animal.cs" />
+    <Compile Include="Clases\Entity\Enemys\Enemy.cs" />
+    <Compile Include="Clases\Entity\Entity.cs" />
+    <Compile Include="Clases\Entity\Npc\Npc.cs" />
+    <Compile Include="Clases\Entity\Player\Player.cs" />
+    <Compile Include="Helpers\Standart comments.cs" />
     <Compile Include="Helpers\EnumHelper.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -94,6 +99,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Files\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
