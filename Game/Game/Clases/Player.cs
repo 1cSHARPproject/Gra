@@ -40,7 +40,7 @@ namespace Game.Clases
         #region Other declaration
 
         #endregion
-
+		
         public Player(string username)
         {
             Username = username;

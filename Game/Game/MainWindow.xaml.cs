@@ -47,7 +47,7 @@ namespace Game
         #endregion
 
         #region Metods
-        Player player = new Player(username :"steafan", hp : 5);
+        Player player = new Player(username :"janusz", MaxHp : 5);
         
         /// <summary>
         /// a test method do not use
