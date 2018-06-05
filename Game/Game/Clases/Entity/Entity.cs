@@ -9,49 +9,56 @@ namespace Game.Clases.Entity
     public class Entity
     {
         #region VARIABLES
+        private int maxHp;
+        public int MaxHp
+        {
+            get { return maxHp; }
+            protected set
+            {
+                if (value >= 1)
+                    maxHp = value;
+                else
+                    maxHp = 1;
+            }
+        }
 
-        #region PRIVATE variables
+        private int hp;
+        public int Hp
+        {
+            get { return hp; }
+            set
+            {
+                if (value >= 0)
+                    hp = value;
+                else
+                    hp = 0;
+            }
+        }
 
-        #endregion
-
-        #region INTERNAL variables
-
-        #endregion
-
-        #region PUBLIC variables
-        public int MaxHp { get; internal set; }
-        public int Hp { get; set; }
-        #endregion
 
         #endregion
         #region STABLES
-        #region PRIVATE stables
-        #endregion
 
-        #region INTERNAL stables
-        #endregion
-
-        #region PUBLIC stables
-        #endregion
         #endregion
         #region Other declaration
 
         #endregion
-        public Entity()
+        public virtual void SummonEntity()
         {
-            MaxHp = 100;
+            maxHp = 100;
             Hp = 100;
         }
-        public Entity(int maxHp)
+        public virtual void SummonEntity(int _maxHp)
         {
-            MaxHp = maxHp;
-            Hp = 100;
+            MaxHp = _maxHp;
+            Hp = _maxHp;
         }
-        public Entity(int maxHp, int hp)
+        public virtual void SummonEntity(int _maxHp, int _hp)
         {
-            MaxHp = maxHp;
-            Hp = hp;
+            MaxHp = _maxHp;
+            Hp = _hp;
         }
+
 
     }
 }

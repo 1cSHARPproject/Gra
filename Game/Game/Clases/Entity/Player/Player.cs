@@ -11,41 +11,34 @@ namespace Game.Clases.Entity
     {
         #region VARIABLES
 
-        #region PRIVATE variables
-
-        #endregion
-
-        #region INTERNAL variables
-
-        #endregion
-
-        #region PUBLIC variables
-        public string Username { get; }
+        private String username;
+        public String Username
+        {
+            get { return username; }
+            protected set
+            {
+                if (username.Length >= 1)
+                    username = value;
+                else
+                    username = "ERROR USERNAME TO SHORT";
+            }
+        }
         public Item Item1 { get; set; }
         public bool Alive { get; internal set; }
         #endregion
-
-        #endregion
         #region STABLES
-        #region PRIVATE stables
-        #endregion
-
-        #region INTERNAL stables
-        #endregion
-
-        #region PUBLIC stables
-        #endregion
         #endregion
         #region Other declaration
 
         #endregion
-		/// <summary>
+        #region Class Constructors
+        /// <summary>
         /// A class that represent player other parametrs will be set to deafult(item = nothing ,MaxHp&Hp 100)
         /// </summary>
-        /// <param name="username">Username of player</param>
-        public Player(string username)
+        /// <param name="_username">Username of player</param>
+        public Player(string _username)
         {
-            Username = username;
+            username = _username;
             Item1 = Item.Nothing;
             MaxHp = 100;
             Hp = 100;
@@ -53,42 +46,42 @@ namespace Game.Clases.Entity
         /// <summary>
         /// A class that represent player other parametrs will be set to deafult (MaxHp&Hp = 100)
         /// </summary>
-        /// <param name="username">Username of player</param>
-        /// <param name="item1">First holding item(enum Item) DEAFULT Nothing</param>
-        public Player(string username, Item item1)
+        /// <param name="_username">Username of player</param>
+        /// <param name="_item1">First holding item(enum Item) DEAFULT Nothing</param>
+        public Player(string _username, Item _item1)
         {
-            Username = username;
-            Item1 = item1;
+            username = _username;
+            Item1 = _item1;
             MaxHp = 100;
             Hp = 100;
         }
         /// <summary>
         /// A class that represent player other parametrs will be set to deafult (Hp = MaxHp)
         /// </summary>
-        /// <param name="username">Username of player</param>
-        /// <param name="item1">First holding item(enum Item) DEAFULT Nothing</param>
-        /// <param name="maxHp">Maximal vaule of hp for that player DEAFULT 100</param>
-        public Player(string username, Item item1, int maxHp)
+        /// <param name="_username">Username of player</param>
+        /// <param name="_item1">First holding item(enum Item) DEAFULT Nothing</param>
+        /// <param name="_maxHp">Maximal vaule of hp for that player DEAFULT 100</param>
+        public Player(string _username, Item _item1, int _maxHp)
         {
-            Username = username;
-            Item1 = item1;
-            MaxHp = maxHp;
-            Hp = maxHp;
+            username = _username;
+            Item1 = _item1;
+            MaxHp = _maxHp;
+            Hp = _maxHp;
         }
         /// <summary>
         /// A class that represent player
         /// </summary>
-        /// <param name="username">Username of player</param>
-        /// <param name="item1">First holding item(enum Item) DEAFULT Nothing</param>
-        /// <param name="maxHp">Maximal vaule of hp for that player DEAFULT 100</param>
-        /// <param name="hp">Actual value of hp DEAFULT 100</param>
-        public Player(string username, Item item1, int maxHp, int hp)
+        /// <param name="_username">Username of player</param>
+        /// <param name="_item1">First holding item(enum Item) DEAFULT Nothing</param>
+        /// <param name="_maxHp">Maximal vaule of hp for that player DEAFULT 100</param>
+        /// <param name="_hp">Actual value of hp DEAFULT 100</param>
+        public Player(string _username, Item _item1, int _maxHp, int _hp)
         {
-            Username = username;
-            Item1 = item1;
-            MaxHp = maxHp;
-            Hp = hp;
+            username = _username;
+            Item1 = _item1;
+            MaxHp = _maxHp;
+            Hp = _hp;
         }
-        
+        #endregion
     }
 }

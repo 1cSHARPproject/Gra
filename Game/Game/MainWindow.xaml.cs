@@ -54,8 +54,12 @@ namespace Game
         /// </summary>
         private void metod1()
         {
-            
-            
+            int a;
+            Enemy testy = new Enemy();
+            testy.SummonEntity();
+            a = testy.MaxHp;
+            TXT_test.Text = a.ToString();
+
         }
         /// <summary>
         /// Second test method do not use
@@ -79,9 +83,11 @@ namespace Game
         {
             var first = TXT_pierwszywarunek.Text;
             var second = TXT_drugiwarunek.Text;
-            var testy = metod2(Convert.ToInt32(first),Convert.ToInt32(second));
+            metod1(/*Convert.ToInt32(first),Convert.ToInt32(second)*/);
             TXT_test.Text = player.Username;
         }
+
+    
         #endregion
 
     }

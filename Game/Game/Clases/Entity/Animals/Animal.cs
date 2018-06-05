@@ -9,29 +9,17 @@ namespace Game.Clases.Entity
     class Animal : Entity
     {
         #region VARIABLES
+        private int tamteLevel;
 
-        #region PRIVATE variables
-
-        #endregion
-
-        #region INTERNAL variables
-
-        #endregion
-
-        #region PUBLIC variables
-        
-        #endregion
+        public int TamteLevel
+        {
+            get { return tamteLevel; }
+            set { tamteLevel = value; }
+        }
 
         #endregion
         #region STABLES
-        #region PRIVATE stables
-        #endregion
 
-        #region INTERNAL stables
-        #endregion
-
-        #region PUBLIC stables
-        #endregion
         #endregion
         #region Other declaration
 

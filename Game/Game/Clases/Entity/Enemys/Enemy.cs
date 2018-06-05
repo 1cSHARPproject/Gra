@@ -6,65 +6,44 @@ using System.Threading.Tasks;
 
 namespace Game.Clases.Entity
 {
-    class Enemy : Entity
+    public class Enemy : Entity
     {
         #region VARIABLES
-
-        #region PRIVATE variables
-
-        #endregion
-
-        #region INTERNAL variables
-
-        #endregion
-
-        #region PUBLIC variables
-        public int Dmg { get; }
-        #endregion
+        private int dmg;
+        public virtual int Dmg
+        {
+            get { return dmg; }
+            set { dmg = value; }
+        }
 
         #endregion
         #region STABLES
-        #region PRIVATE stables
-
-        #endregion
-
-        #region INTERNAL stables
-
-        #endregion
-
-        #region PUBLIC stables
-
-        #endregion
         #endregion
         #region Other declaration
 
         #endregion
-        #region Class Constructors
-        public Enemy()
+        #region Metods
+        public override void SummonEntity()
         {
-            MaxHp = 100;
-            Hp = MaxHp;
+            base.SummonEntity();
             Dmg = 1;
         }
 
-        public Enemy(int maxHp) : base(maxHp)
+        public override void SummonEntity(int _maxHp)
         {
-            MaxHp = maxHp;
-            Hp = MaxHp;
+            base.SummonEntity(_maxHp);
             Dmg = 1;
         }
 
-        public Enemy(int maxHp, int hp) : base(maxHp, hp)
+        public override void SummonEntity(int _maxHp, int _hp)
         {
-            MaxHp = maxHp;
-            Hp = hp;
+            base.SummonEntity(_maxHp, _hp);
             Dmg = 1;
         }
-        public Enemy(int maxHp, int hp, int dmg) : base(maxHp, hp)
+        public virtual void SummonEntity(int _maxHp, int _hp, int _dmg)
         {
-            MaxHp = maxHp;
-            Hp = hp;
-            Dmg = dmg; 
+            base.SummonEntity(_maxHp, _hp);
+            Dmg = _dmg; 
         }
         #endregion
 
