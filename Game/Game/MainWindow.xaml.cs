@@ -2,6 +2,7 @@
 using Game.Clases.Entity;
 using Game.Helpers;
 using System;
+using System.Collections.Generic;
 using System.Windows;
 
 
@@ -14,29 +15,10 @@ namespace Game
     {
         #region VARIABLES
 
-            #region PRIVATE variables
-            private int test=1; //testowa zmienna
-            #endregion
-
-            #region INTERNAL variables
-
-            #endregion
-
-            #region PUBLIC variables
-
-            #endregion
-
         #endregion
         #region STABLES
-            #region PRIVATE stables
-            #endregion
-
-            #region INTERNAL stables
-            #endregion
-
-            #region PUBLIC stables
-            #endregion
         #endregion
+
 
         #region Konstruktor
         public MainWindow()
@@ -59,6 +41,7 @@ namespace Game
             testy.SummonEntity();
             a = testy.MaxHp;
             TXT_test.Text = a.ToString();
+            //GRID_tests.Visibility = Visibility.Collapsed;
 
         }
         /// <summary>
@@ -67,12 +50,11 @@ namespace Game
         /// <param name="a">test param</param>
         /// <param name="b">test param</param>
         /// <returns>test returns</returns>
-        private int metod2(int a, int b)
+        private int metod2( int a, int b)
         {
             var one = a;
-            var two = b;
-            var zwrot = a * a * a + b;
-            return zwrot;
+            var two = b; 
+            return a * a * a + b;
         }
         /// <summary>
         /// Test method that run when user click button 
@@ -85,9 +67,13 @@ namespace Game
             var second = TXT_drugiwarunek.Text;
             metod1(/*Convert.ToInt32(first),Convert.ToInt32(second)*/);
             TXT_test.Text = player.Username;
+            //var width = SystemParameters.PrimaryScreenWidth;
+            //var height = SystemParameters.PrimaryScreenHeight;
+            //Application.Current.MainWindow.Width = width;
+            //Application.Current.MainWindow.Height = height;
+            //MessageBox.Show(width.ToString() + " | " + height.ToString());
         }
 
-    
         #endregion
 
     }

@@ -40,6 +40,13 @@ namespace Game.Helpers
         SpaceSuit,
         ArmoredSpaceSuit
     }
+    public enum Class
+    {
+        Warior,
+        Healer,
+
+
+    }
     public static class EnumHelper
     {
     }

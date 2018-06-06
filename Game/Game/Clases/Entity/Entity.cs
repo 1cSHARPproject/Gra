@@ -15,7 +15,7 @@ namespace Game.Clases.Entity
             get { return maxHp; }
             protected set
             {
-                if (value >= 1)
+                if (value > 1)
                     maxHp = value;
                 else
                     maxHp = 1;
@@ -28,7 +28,7 @@ namespace Game.Clases.Entity
             get { return hp; }
             set
             {
-                if (value >= 0)
+                if (value > 0)
                     hp = value;
                 else
                     hp = 0;
@@ -43,20 +43,32 @@ namespace Game.Clases.Entity
         #region Other declaration
 
         #endregion
+        /// <summary>
+        /// 
+        /// </summary>
         public virtual void SummonEntity()
         {
-            maxHp = 100;
+            MaxHp = 100;
             Hp = 100;
         }
-        public virtual void SummonEntity(int _maxHp)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="maxHp"></param>
+        public virtual void SummonEntity(int maxHp)
         {
-            MaxHp = _maxHp;
-            Hp = _maxHp;
+            MaxHp = maxHp;
+            Hp = maxHp;
         }
-        public virtual void SummonEntity(int _maxHp, int _hp)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="maxHp"></param>
+        /// <param name="hp"></param>
+        public virtual void SummonEntity(int maxHp, int hp)
         {
-            MaxHp = _maxHp;
-            Hp = _hp;
+            MaxHp = maxHp;
+            Hp = hp;
         }
 
 

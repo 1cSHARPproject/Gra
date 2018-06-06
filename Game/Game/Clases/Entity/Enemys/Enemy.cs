@@ -13,8 +13,28 @@ namespace Game.Clases.Entity
         public virtual int Dmg
         {
             get { return dmg; }
-            set { dmg = value; }
+            internal set
+            {
+                if (value > 1)
+                    dmg = value;
+                else
+                    dmg = 1;
+            }
         }
+
+        private int atackRange;
+        public int AtackRange
+        {
+            get { return atackRange; }
+            internal set
+            {
+                if (value > 1)
+                    atackRange = value;
+                else
+                    atackRange = 1;
+            }
+        }
+
 
         #endregion
         #region STABLES
@@ -23,27 +43,43 @@ namespace Game.Clases.Entity
 
         #endregion
         #region Metods
+        /// <summary>
+        /// 
+        /// </summary>
         public override void SummonEntity()
         {
             base.SummonEntity();
             Dmg = 1;
         }
-
-        public override void SummonEntity(int _maxHp)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="maxHp"></param>
+        public override void SummonEntity(int maxHp)
         {
-            base.SummonEntity(_maxHp);
+            base.SummonEntity(maxHp);
             Dmg = 1;
         }
-
-        public override void SummonEntity(int _maxHp, int _hp)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="maxHp"></param>
+        /// <param name="hp"></param>
+        public override void SummonEntity(int maxHp, int hp)
         {
-            base.SummonEntity(_maxHp, _hp);
+            base.SummonEntity(maxHp, hp);
             Dmg = 1;
         }
-        public virtual void SummonEntity(int _maxHp, int _hp, int _dmg)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="maxHp"></param>
+        /// <param name="hp"></param>
+        /// <param name="dmg"></param>
+        public virtual void SummonEntity(int maxHp, int hp, int dmg)
         {
-            base.SummonEntity(_maxHp, _hp);
-            Dmg = _dmg; 
+            base.SummonEntity(maxHp, hp);
+            Dmg = dmg; 
         }
         #endregion
 

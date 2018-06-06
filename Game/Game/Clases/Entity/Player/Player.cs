@@ -24,7 +24,10 @@ namespace Game.Clases.Entity
             }
         }
         public Item Item1 { get; set; }
+        public Item Item2 { get; set; }
+        public Suit Suit { get; set; }
         public bool Alive { get; internal set; }
+        
         #endregion
         #region STABLES
         #endregion
